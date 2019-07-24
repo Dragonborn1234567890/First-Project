@@ -11,6 +11,7 @@ function preload(){
 function setup() {
   createCanvas(600, 200);
   New = createSprite(100,100,100,100);
+  New.shapecolour="red";
   trex = createSprite(50,180,20,50);
   trex.addAnimation("running", trex_running);
   trex.scale = 0.5;
@@ -40,7 +41,7 @@ function draw() {
   trex.collide(invisibleGround);
   drawSprites();
 }
-function spawnObstacles() {
+/*function spawnObstacles() {
   if(frameCount % 60 === 0) {
     var obstacle = createSprite(400,365,10,40);
     obstacle.velocityX = - (6 + 3*count/100);
@@ -77,4 +78,4 @@ function spawnClouds() {
     CloudsGroup.add(cloud);
   }
   
-}
+}*/
